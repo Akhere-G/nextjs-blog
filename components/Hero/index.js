@@ -1,13 +1,8 @@
-import { Container } from "./HeroComponents";
+import Image from "next/image";
 
 const Hero = () => {
   return (
-    <Container
-      width='300px'
-      height='400px'
-      layout='responsive'
-      src='/hero.jpg'
-    />
+    <Image width='300px' height='400px' layout='responsive' src='/hero.jpg' />
   );
 };
 

@@ -1,0 +1,132 @@
+.container {
+  background-color: #0000;
+  position: absolute;
+  color: white;
+  z-index: 999;
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1em 1em;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  z-index: 999;
+  height: 50px;
+  color: white;
+}
+
+.logo > a {
+  font-size: 2rem;
+  color: white;
+}
+
+.navbarLinks {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -10em;
+  pointer-events: none;
+
+  opacity: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-dark);
+  transition: var(--transition);
+  z-index: 998;
+}
+
+.open {
+  top: 3rem;
+  opacity: 1;
+  transition: var(--transition);
+  pointer-events: all;
+}
+
+.navbarLink {
+  width: 100%;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.navbarLink > a {
+  width: 100%;
+  height: 100%;
+  padding: 0.5em 0;
+  display: block;
+  color: white;
+  transition: var(--transition);
+}
+
+.navbarLink a:hover {
+  background-color: var(--primary-light);
+  color: var(--focus);
+  transition: var(--transition);
+}
+
+.activeLink a {
+  color: var(--focus);
+}
+
+.navbarBtn {
+  font-size: 0.25rem;
+  background-color: var(--secondary-bg-1);
+  color: white;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.navbarBtn:hover {
+  transform: rotate(90deg);
+  transition: var(--transition);
+}
+
+@media screen and (min-width: 600px) {
+  .navbarBtn {
+    display: none;
+    pointer-events: none;
+  }
+
+  .navbarLinks {
+    position: static;
+    flex-direction: row;
+    flex: 1;
+    margin-left: 1em;
+    margin-top: 0;
+    justify-content: flex-end;
+    background-color: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .navbarLink {
+    width: auto;
+    height: auto;
+
+    margin-right: 1em;
+  }
+  .navbarLink > a {
+    width: auto;
+    height: auto;
+    padding: auto;
+    display: block;
+    color: white;
+  }
+
+  .navbarLink a:hover {
+    background-color: transparent;
+    color: var(--focus-dark);
+
+    transition: var(--transition);
+  }
+
+  .activeLink a {
+    color: var(--focus-dark);
+  }
+}
