@@ -4,14 +4,7 @@ import { useRouter } from "next/router";
 import styles from "../../styles/Navbar.module.css";
 import { Menu } from "@material-ui/icons";
 
-const links = [
-  { name: "Home", slug: "/" },
-  { name: "Events", slug: "/events" },
-  { name: "About", slug: "/about" },
-  { name: "Contact", slug: "/contact" },
-];
-
-const Navbar = () => {
+const Navbar = ({ links = [] }) => {
   const [open, setOpen] = useState(false);
   const { pathname } = useRouter();
 
