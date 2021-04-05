@@ -17,7 +17,6 @@ export const getStaticProps = async () => {
 
   const { events } = data;
 
-  console.log("events", events);
   return {
     props: { events },
   };

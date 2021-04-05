@@ -54,8 +54,12 @@
   .eventReversed {
     flex-direction: column;
   }
-  .event p,
-  .eventReversed p {
+  .event > p,
+  .eventReversed > p {
     margin: 0;
+  }
+
+  .details {
+    margin-left: 0rem;
   }
 }

@@ -22,7 +22,7 @@
 .image {
   flex: 0.8;
   min-width: 200px;
-  filter: brightness(40%);
+  filter: brightness(60%);
 }
 
 .details {
