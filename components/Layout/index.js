@@ -1,5 +1,4 @@
-import { Navbar } from "..";
-import { Footer } from "..";
+import { Navbar, Footer, Meta } from "..";
 import styles from "../../styles/Layout.module.css";
 
 const links = [
@@ -11,6 +10,7 @@ const links = [
 const Layout = ({ children }) => {
   return (
     <>
+      <Meta />
       <div className={styles.mainSection}>
         <Navbar links={links} />
         {children}
