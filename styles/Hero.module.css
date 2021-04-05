@@ -1,0 +1,29 @@
+.hero {
+  position: relative;
+  padding: 3rem 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  top: 9rem;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.paragraph {
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+}
