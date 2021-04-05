@@ -19,7 +19,7 @@ const Event = ({ title, slug, location, time, src }) => {
         </span>
         <span className={styles.detail}>
           <Schedule />
-          <p>{`${time.toLocaleDateString()}`}</p>
+          <p>{`${new Date(time).toLocaleDateString()}`}</p>
         </span>
         <Link href='/events/[slug]' as={`/events/${slug}`}>
           <a className='link'>details</a>

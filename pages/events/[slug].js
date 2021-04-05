@@ -21,7 +21,7 @@ const EventPage = ({ title, location, time, src, text }) => {
         </span>
         <span className={styles.detail}>
           <Schedule />
-          <p>{`${new Date(time).getTime()}`}</p>
+          <p>{`${new Date(time).toLocaleDateString()}`}</p>
         </span>
         <Link href='/events/'>
           <a className='link'>Other events</a>
@@ -34,8 +34,6 @@ const EventPage = ({ title, location, time, src, text }) => {
 export const getStaticPaths = async () => {
   const res = await fetch(`${server}/api/events`);
   const data = await res.json();
-
-  console.log(data);
 
   const { events } = data;
 

@@ -1,8 +1,8 @@
 import React from "react";
+import { server } from "../config";
 import { Hero, Events } from "../components";
-import { events } from "../data.js";
 
-const EventsPage = () => {
+const EventsPage = ({ events }) => {
   return (
     <>
       <Hero image='volunteer.jpg' />
@@ -11,4 +11,15 @@ const EventsPage = () => {
   );
 };
 
+export const getStaticProps = async () => {
+  const res = await fetch(`${server}/api/events`);
+  const data = await res.json();
+
+  const { events } = data;
+
+  console.log("events", events);
+  return {
+    props: { events },
+  };
+};
 export default EventsPage;
