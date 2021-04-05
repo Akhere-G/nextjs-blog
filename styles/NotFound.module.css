@@ -1,0 +1,20 @@
+.notFound {
+  padding: 1rem;
+  max-width: var(--max-width);
+  margin: 3rem 0;
+}
+
+.notFound h1,
+.notFound h2 {
+  margin-bottom: 1rem;
+}
+
+.goHomeLink {
+  color: var(--focus-dark);
+}
+
+.goHomeLink:hover,
+.goHomeLink:focus,
+.goHomeLink:active {
+  text-decoration: underline;
+}
