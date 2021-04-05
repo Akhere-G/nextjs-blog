@@ -5,9 +5,7 @@ const Hero = ({ image = "/hero.jpg" }) => {
   const heroRef = useRef();
 
   useEffect(() => {
-    console.log(heroRef.current.style);
     heroRef.current.style = `background-image: linear-gradient(#0004, #0008), url("${image}")`;
-    console.log(heroRef.current.style);
   }, []);
 
   return (
