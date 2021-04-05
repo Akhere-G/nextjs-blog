@@ -1,0 +1,47 @@
+.events {
+  margin: auto;
+  max-width: var(--max-width);
+
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.event {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.event > p {
+  margin-left: 1rem;
+}
+
+.eventReversed {
+  flex-direction: row-reverse;
+}
+
+.eventReversed > p {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+.eventImage {
+  flex: 1;
+  min-height: 200px;
+}
+
+.eventPara {
+  flex: 1.2;
+}
+
+@media screen and (max-width: 600px) {
+  .event,
+  .eventReversed {
+    flex-direction: column;
+  }
+  .event p,
+  .eventReversed p {
+    margin: 0;
+  }
+}
