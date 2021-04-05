@@ -33,14 +33,10 @@ export default function Home() {
                 index % 2 === 1 && styles.cardReversed
               }`}
             >
-              <Image
-                className={styles.cardImage}
-                src={src}
-                width='300'
-                height='200'
-                fill='responsive
-                '
-              />
+              <div className={styles.cardImage}>
+                <Image src={src} width='150' height='100' layout='responsive' />
+              </div>
+
               <p className={styles.cardPara}>{text}</p>
             </article>
           );

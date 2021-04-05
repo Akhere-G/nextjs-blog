@@ -59,8 +59,16 @@
 }
 .cardImage {
   flex: 1;
+  min-height: 200px;
 }
 
 .cardPara {
-  flex: 1;
+  flex: 1.2;
+}
+
+@media screen and (max-width: 600px) {
+  .card,
+  .cardReversed {
+    flex-direction: column;
+  }
 }
