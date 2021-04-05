@@ -47,6 +47,17 @@ a {
   color: var(--primary);
 }
 
+.link {
+  color: var(--focus-dark);
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  color: var(--focus);
+  text-decoration: underline;
+}
+
 li {
   list-style: none;
 }

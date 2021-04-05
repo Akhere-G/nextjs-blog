@@ -22,7 +22,8 @@ export const cards = [
 export const events = [
   {
     id: 1,
-    title: "Meeting",
+    title: "First youth meeting",
+    slug: "first-youth-meeting",
     location: "New Port Rd, SW7 U2",
     time: new Date(1549312452 * 1000),
     src: "/groupMeeting.jpg",
@@ -31,7 +32,8 @@ export const events = [
   },
   {
     id: 2,
-    title: "Meeting",
+    title: "Town Hall Gathering",
+    slug: "town-hall-gathering",
     location: "Russell Street, SE3 6BW",
     time: new Date(1599312452 * 1000),
     src: "/feet.jpg",
@@ -40,7 +42,8 @@ export const events = [
   },
   {
     id: 3,
-    title: "Celebration",
+    title: "Aunt Jane's Celebration",
+    slug: "aunt-janes-celebration",
     location: "Old Baker's Road, EC2 C12",
     time: new Date(1620312452 * 1000),
     src: "/hands.jpg",
@@ -49,7 +52,8 @@ export const events = [
   },
   {
     id: 4,
-    title: "Birthday",
+    title: "Special Suprise Birthday Party",
+    slug: "suprise-birthday-party",
     location: "Brixton rd, SE19 B19",
     time: new Date(1623512452 * 1000),
     src: "/groupMeeting.jpg",
