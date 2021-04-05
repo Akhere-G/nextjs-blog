@@ -71,4 +71,8 @@
   .cardReversed {
     flex-direction: column;
   }
+  .card p,
+  .cardReversed p {
+    margin: 0;
+  }
 }
