@@ -1,12 +1,12 @@
 import React from "react";
 
-import { giveBloodEvents } from "../../data";
+import { giveBackEvents } from "../../data";
 import { EventTemplate } from "../../components";
 
-const GiveBloodEvent = ({ title, location, time, src, text, link }) => {
+const GiveBackEvent = ({ title, location, time, src, text, link }) => {
   return (
     <EventTemplate
-      program='give-blood'
+      program='give-back'
       {...{ title, location, time, src, text, link }}
     />
   );
@@ -18,7 +18,7 @@ export const getStaticPaths = async () => {
 
   //const { events } = data;
 
-  const slugs = giveBloodEvents.map(event => event.slug);
+  const slugs = giveBackEvents.map(event => event.slug);
 
   const paths = slugs.map(slug => ({ params: { slug } }));
 
@@ -34,7 +34,7 @@ export const getStaticProps = async context => {
   //const res = await fetch(`${server}/api/events/${slug}`);
   //const { event } = await res.json();
 
-  const event = giveBloodEvents.find(event => event.slug === slug);
+  const event = giveBackEvents.find(event => event.slug === slug);
   return { props: { ...event } };
 };
-export default GiveBloodEvent;
+export default GiveBackEvent;

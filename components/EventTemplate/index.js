@@ -3,7 +3,7 @@ import Link from "next/Link";
 import { Schedule, PinDrop, Book } from "@material-ui/icons";
 import styles from "../../styles/SingleEvent.module.css";
 
-const EventTemplate = ({ title, location, time, src, text, link }) => {
+const EventTemplate = ({ title, location, time, src, text, link, program }) => {
   return (
     <article key={title} className={styles.event}>
       <div className={styles.image}>
@@ -34,7 +34,7 @@ const EventTemplate = ({ title, location, time, src, text, link }) => {
             </a>
           </p>
         </span>
-        <Link href='/give-blood/'>
+        <Link href={`/${program}`}>
           <a className='link'>Other events</a>
         </Link>
       </div>
