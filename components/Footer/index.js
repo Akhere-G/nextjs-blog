@@ -10,7 +10,7 @@ const socials = [
   { link: "https://twitter.com", Icon: Twitter },
   { link: "https://instagram.com", Icon: Instagram },
 ];
-const Footer = ({ links = [] }) => {
+const Footer = ({ links = [], programs = [] }) => {
   const { pathname } = useRouter();
   return (
     <div className={styles.container}>
@@ -49,6 +49,18 @@ const Footer = ({ links = [] }) => {
           <h2>Quick Links</h2>
           <ul className={styles.links}>
             {links.map((link, index) => {
+              const { name, slug } = link;
+              const activeClass = pathname === slug ? styles.activeLink : "";
+              return (
+                <li key={index} className={`${styles.link} ${activeClass}`}>
+                  <Link key={slug} href={slug}>
+                    <a>{name}</a>
+                  </Link>
+                </li>
+              );
+            })}
+            <h3>Programs</h3>
+            {programs.map((link, index) => {
               const { name, slug } = link;
               const activeClass = pathname === slug ? styles.activeLink : "";
               return (
