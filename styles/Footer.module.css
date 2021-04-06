@@ -25,7 +25,7 @@
 
 .contactCard {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .contactCard p {
@@ -73,4 +73,9 @@
 .activeLink a {
   color: var(--focus);
   transition: var(--transition);
+}
+
+.footer p,
+.footer a {
+  color: #eeed;
 }
