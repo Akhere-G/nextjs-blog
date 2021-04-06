@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "../../../styles/Event.module.css";
 import { Schedule, PinDrop } from "@material-ui/icons";
 
-const Event = ({ title, slug, location, time, src, program }) => {
+const Event = ({ title, slug, location, time, src, brief, program }) => {
   return (
     <article key={title} className={styles.event}>
       <div className={styles.image}>
@@ -21,8 +21,9 @@ const Event = ({ title, slug, location, time, src, program }) => {
           <Schedule />
           <p>{time}</p>
         </span>
+        <p>{brief}</p>
         <Link href={`/${program}/[slug]`} as={`/${program}/${slug}`}>
-          <a className='link'>details</a>
+          <a className='link'>Futher Details</a>
         </Link>
       </div>
     </article>

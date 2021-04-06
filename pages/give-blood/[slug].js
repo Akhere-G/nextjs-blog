@@ -21,9 +21,9 @@ const EventPage = ({ title, location, time, src, text }) => {
         </span>
         <span className={styles.detail}>
           <Schedule />
-          <p>{`${new Date(time).toLocaleDateString()}`}</p>
+          <p>{time}</p>
         </span>
-        <Link href='/events/'>
+        <Link href='/give-blood/'>
           <a className='link'>Other events</a>
         </Link>
       </div>

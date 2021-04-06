@@ -70,6 +70,8 @@ export const giveBloodEvents = [
     location: "Archway Rd, SE7 U2",
     time: "Thursday",
     src: "/groupMeeting.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias minus officia libero itaque reiciendis, eius consequatur, impedit repudiandae labore totam quos nobis dolores illo unde delectus veritatis iusto dolorum molestiae.",
   },
@@ -80,6 +82,8 @@ export const giveBloodEvents = [
     location: "Russell Street, SE3 6BW",
     time: "Thursday",
     src: "/feet.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quae et voluptatem eaque facilis natus voluptate recusandae ipsum saepe similique, odio nemo tempore perferendis minus labore. Praesentium excepturi deleniti incidunt id ducimus autem sed repellendus, qui amet numquam esse odio sunt eius necessitatibus laborum ea officiis, culpa facilis nisi vitae.",
   },
@@ -90,6 +94,8 @@ export const giveBloodEvents = [
     location: "Old Baker's Road, EC2 C12",
     time: "Thursday",
     src: "/hands.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
   },
@@ -100,6 +106,8 @@ export const giveBloodEvents = [
     location: "Brixton rd, SE19 B19",
     time: "Thursday",
     src: "/groupMeeting.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
   },
@@ -113,6 +121,8 @@ export const giveBackEvents = [
     location: "Archway Rd, SE7 U2",
     time: "Thursday",
     src: "/groupMeeting.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias minus officia libero itaque reiciendis, eius consequatur, impedit repudiandae labore totam quos nobis dolores illo unde delectus veritatis iusto dolorum molestiae.",
   },
@@ -123,6 +133,8 @@ export const giveBackEvents = [
     location: "Russell Street, SE3 6BW",
     time: "Thursday",
     src: "/feet.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quae et voluptatem eaque facilis natus voluptate recusandae ipsum saepe similique, odio nemo tempore perferendis minus labore. Praesentium excepturi deleniti incidunt id ducimus autem sed repellendus, qui amet numquam esse odio sunt eius necessitatibus laborum ea officiis, culpa facilis nisi vitae.",
   },
@@ -133,6 +145,8 @@ export const giveBackEvents = [
     location: "Old Baker's Road, EC2 C12",
     time: "Thursday",
     src: "/hands.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
   },
@@ -143,6 +157,8 @@ export const giveBackEvents = [
     location: "Brixton rd, SE19 B19",
     time: "Thursday",
     src: "/groupMeeting.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
   },
@@ -156,6 +172,8 @@ export const worshipEvents = [
     location: "Archway Rd, SE7 U2",
     time: "Thursday",
     src: "/groupMeeting.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias minus officia libero itaque reiciendis, eius consequatur, impedit repudiandae labore totam quos nobis dolores illo unde delectus veritatis iusto dolorum molestiae.",
   },
@@ -166,6 +184,8 @@ export const worshipEvents = [
     location: "Russell Street, SE3 6BW",
     time: "Thursday",
     src: "/feet.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quae et voluptatem eaque facilis natus voluptate recusandae ipsum saepe similique, odio nemo tempore perferendis minus labore. Praesentium excepturi deleniti incidunt id ducimus autem sed repellendus, qui amet numquam esse odio sunt eius necessitatibus laborum ea officiis, culpa facilis nisi vitae.",
   },
@@ -176,6 +196,8 @@ export const worshipEvents = [
     location: "Old Baker's Road, EC2 C12",
     time: "Thursday",
     src: "/hands.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
   },
@@ -186,6 +208,8 @@ export const worshipEvents = [
     location: "Brixton rd, SE19 B19",
     time: "Thursday",
     src: "/groupMeeting.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
   },
@@ -199,6 +223,8 @@ export const bibleStudyEvents = [
     location: "Archway Rd, SE7 U2",
     time: "Thursday",
     src: "/groupMeeting.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias minus officia libero itaque reiciendis, eius consequatur, impedit repudiandae labore totam quos nobis dolores illo unde delectus veritatis iusto dolorum molestiae.",
   },
@@ -209,6 +235,8 @@ export const bibleStudyEvents = [
     location: "Russell Street, SE3 6BW",
     time: "Thursday",
     src: "/feet.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quae et voluptatem eaque facilis natus voluptate recusandae ipsum saepe similique, odio nemo tempore perferendis minus labore. Praesentium excepturi deleniti incidunt id ducimus autem sed repellendus, qui amet numquam esse odio sunt eius necessitatibus laborum ea officiis, culpa facilis nisi vitae.",
   },
@@ -219,6 +247,8 @@ export const bibleStudyEvents = [
     location: "Old Baker's Road, EC2 C12",
     time: "Thursday",
     src: "/hands.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
   },
@@ -229,6 +259,8 @@ export const bibleStudyEvents = [
     location: "Brixton rd, SE19 B19",
     time: "Thursday",
     src: "/groupMeeting.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
   },
