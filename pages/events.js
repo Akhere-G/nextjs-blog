@@ -6,7 +6,7 @@ const EventsPage = ({ events }) => {
   return (
     <>
       <Hero image='volunteer.jpg' />
-      <Events events={events} />
+      <Events program='events' events={events} />
     </>
   );
 };

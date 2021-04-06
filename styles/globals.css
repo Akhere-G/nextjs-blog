@@ -47,6 +47,9 @@ a {
   color: var(--primary);
 }
 
+img {
+  filter: saturate(0%);
+}
 .link {
   color: var(--focus-dark);
 }
