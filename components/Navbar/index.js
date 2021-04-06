@@ -4,8 +4,9 @@ import { useRouter } from "next/router";
 import styles from "../../styles/Navbar.module.css";
 import { Menu } from "@material-ui/icons";
 
-const Navbar = ({ links = [] }) => {
+const Navbar = ({ links = [], programs = [] }) => {
   const [open, setOpen] = useState(false);
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const { pathname } = useRouter();
 
   return (
@@ -13,10 +14,12 @@ const Navbar = ({ links = [] }) => {
       className={styles.container}
       onMouseLeave={() => {
         setOpen(false);
+        setIsSubmenuOpen(false);
       }}
       onBlurCapture={e => {
         if (!e.currentTarget.contains(e.relatedTarget)) {
           setOpen(false);
+          setIsSubmenuOpen(false);
         }
       }}
     >
@@ -39,17 +42,51 @@ const Navbar = ({ links = [] }) => {
             const activeClass = pathname === slug ? styles.activeLink : "";
             return (
               <li key={index} className={`${styles.navbarLink} ${activeClass}`}>
-                <Link
-                  href={slug}
-                  onClick={() => {
-                    setOpen(false);
-                  }}
-                >
-                  {name}
+                <Link href={slug}>
+                  <a
+                    onClick={() => {
+                      setOpen(false);
+                    }}
+                  >
+                    {name}
+                  </a>
                 </Link>
               </li>
             );
           })}
+          <li
+            className={`${styles.navbarLink} ${styles.programItem}`}
+            onMouseOver={() => setIsSubmenuOpen(true)}
+          >
+            <a>Programs</a>
+            <ul
+              className={`${styles.submenu} ${
+                isSubmenuOpen ? styles.openSubmenu : ""
+              }`}
+            >
+              {programs.map((link, index) => {
+                const { name, slug } = link;
+                const activeClass = pathname === slug ? styles.activeLink : "";
+                return (
+                  <li
+                    key={index}
+                    className={`${styles.navbarLink} ${activeClass}`}
+                  >
+                    <Link href={slug}>
+                      <a
+                        onClick={() => {
+                          setOpen(false);
+                          setIsSubmenuOpen(false);
+                        }}
+                      >
+                        {name}
+                      </a>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </li>
         </ul>
         {links.length > 0 && (
           <button

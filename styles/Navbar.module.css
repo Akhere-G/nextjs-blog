@@ -85,6 +85,13 @@
   transform: rotate(90deg);
   transition: var(--transition);
 }
+.programItem {
+  position: relative;
+}
+
+.programItem > a {
+  display: none;
+}
 
 @media screen and (min-width: 600px) {
   .navbarBtn {
@@ -105,6 +112,28 @@
     opacity: 1;
     pointer-events: all;
   }
+
+  .submenu {
+    position: absolute;
+    top: -20rem;
+    background-color: var(--primary-dark);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+    min-width: 130px;
+    right: -1rem;
+    z-index: 999;
+    transition: var(--transition);
+  }
+
+  .openSubmenu {
+    opacity: 1;
+    top: 2.7rem;
+    transition: var(--transition);
+  }
+
   .navbarLink {
     width: auto;
     height: auto;
