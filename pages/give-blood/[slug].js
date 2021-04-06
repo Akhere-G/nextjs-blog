@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/Link";
 import { server } from "../../config";
 import { giveBloodEvents } from "../../data";
-import { Schedule, PinDrop } from "@material-ui/icons";
+import { Schedule, PinDrop, Book } from "@material-ui/icons";
 import styles from "../../styles/SingleEvent.module.css";
 
-const EventPage = ({ title, location, time, src, text }) => {
+const EventPage = ({ title, location, time, src, text, link }) => {
   return (
     <article key={title} className={styles.event}>
       <div className={styles.image}>
@@ -22,6 +22,20 @@ const EventPage = ({ title, location, time, src, text }) => {
         <span className={styles.detail}>
           <Schedule />
           <p>{time}</p>
+        </span>
+        <span className={styles.detail}>
+          <Book />
+          <p>
+            Book{" "}
+            <a
+              className='link'
+              href={link}
+              rel='noreferrer noopener'
+              target='_blank'
+            >
+              here
+            </a>
+          </p>
         </span>
         <Link href='/give-blood/'>
           <a className='link'>Other events</a>

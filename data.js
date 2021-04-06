@@ -22,43 +22,55 @@ export const cards = [
 export const events = [
   {
     id: 1,
-    title: "First youth meeting",
-    slug: "first-youth-meeting",
-    location: "New Port Rd, SW7 U2",
-    time: new Date(1549312452 * 1000),
+    title: "First Blood Drive",
+    slug: "first-blood-drive",
+    location: "Archway Rd, SE7 U2",
+    time: "Thursday",
     src: "/groupMeeting.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias minus officia libero itaque reiciendis, eius consequatur, impedit repudiandae labore totam quos nobis dolores illo unde delectus veritatis iusto dolorum molestiae.",
+    link: "/",
   },
   {
     id: 2,
-    title: "Town Hall Gathering",
-    slug: "town-hall-gathering",
+    title: "Celebration of First Drive",
+    slug: "celebration-first-drive",
     location: "Russell Street, SE3 6BW",
-    time: new Date(1599312452 * 1000),
+    time: "Thursday",
     src: "/feet.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quae et voluptatem eaque facilis natus voluptate recusandae ipsum saepe similique, odio nemo tempore perferendis minus labore. Praesentium excepturi deleniti incidunt id ducimus autem sed repellendus, qui amet numquam esse odio sunt eius necessitatibus laborum ea officiis, culpa facilis nisi vitae.",
+    link: "/",
   },
   {
     id: 3,
     title: "Aunt Jane's Celebration",
     slug: "aunt-janes-celebration",
     location: "Old Baker's Road, EC2 C12",
-    time: new Date(1620312452 * 1000),
+    time: "Thursday",
     src: "/hands.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
+    link: "/",
   },
   {
     id: 4,
     title: "Special Suprise Birthday Party",
     slug: "suprise-birthday-party",
     location: "Brixton rd, SE19 B19",
-    time: new Date(1623512452 * 1000),
+    time: "Thursday",
     src: "/groupMeeting.jpg",
+    brief:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
+    link: "/",
   },
 ];
 
@@ -74,6 +86,7 @@ export const giveBloodEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias minus officia libero itaque reiciendis, eius consequatur, impedit repudiandae labore totam quos nobis dolores illo unde delectus veritatis iusto dolorum molestiae.",
+    link: "/",
   },
   {
     id: 2,
@@ -86,6 +99,7 @@ export const giveBloodEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quae et voluptatem eaque facilis natus voluptate recusandae ipsum saepe similique, odio nemo tempore perferendis minus labore. Praesentium excepturi deleniti incidunt id ducimus autem sed repellendus, qui amet numquam esse odio sunt eius necessitatibus laborum ea officiis, culpa facilis nisi vitae.",
+    link: "/",
   },
   {
     id: 3,
@@ -98,6 +112,7 @@ export const giveBloodEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
+    link: "/",
   },
   {
     id: 4,
@@ -110,6 +125,7 @@ export const giveBloodEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
+    link: "/",
   },
 ];
 
@@ -125,6 +141,7 @@ export const giveBackEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias minus officia libero itaque reiciendis, eius consequatur, impedit repudiandae labore totam quos nobis dolores illo unde delectus veritatis iusto dolorum molestiae.",
+    link: "/",
   },
   {
     id: 2,
@@ -137,6 +154,7 @@ export const giveBackEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quae et voluptatem eaque facilis natus voluptate recusandae ipsum saepe similique, odio nemo tempore perferendis minus labore. Praesentium excepturi deleniti incidunt id ducimus autem sed repellendus, qui amet numquam esse odio sunt eius necessitatibus laborum ea officiis, culpa facilis nisi vitae.",
+    link: "/",
   },
   {
     id: 3,
@@ -149,6 +167,7 @@ export const giveBackEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
+    link: "/",
   },
   {
     id: 4,
@@ -161,6 +180,7 @@ export const giveBackEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
+    link: "/",
   },
 ];
 
@@ -176,6 +196,7 @@ export const worshipEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias minus officia libero itaque reiciendis, eius consequatur, impedit repudiandae labore totam quos nobis dolores illo unde delectus veritatis iusto dolorum molestiae.",
+    link: "/",
   },
   {
     id: 2,
@@ -188,6 +209,7 @@ export const worshipEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quae et voluptatem eaque facilis natus voluptate recusandae ipsum saepe similique, odio nemo tempore perferendis minus labore. Praesentium excepturi deleniti incidunt id ducimus autem sed repellendus, qui amet numquam esse odio sunt eius necessitatibus laborum ea officiis, culpa facilis nisi vitae.",
+    link: "/",
   },
   {
     id: 3,
@@ -200,6 +222,7 @@ export const worshipEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
+    link: "/",
   },
   {
     id: 4,
@@ -212,6 +235,7 @@ export const worshipEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
+    link: "/",
   },
 ];
 
@@ -227,6 +251,7 @@ export const bibleStudyEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias minus officia libero itaque reiciendis, eius consequatur, impedit repudiandae labore totam quos nobis dolores illo unde delectus veritatis iusto dolorum molestiae.",
+    link: "/",
   },
   {
     id: 2,
@@ -239,6 +264,7 @@ export const bibleStudyEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quae et voluptatem eaque facilis natus voluptate recusandae ipsum saepe similique, odio nemo tempore perferendis minus labore. Praesentium excepturi deleniti incidunt id ducimus autem sed repellendus, qui amet numquam esse odio sunt eius necessitatibus laborum ea officiis, culpa facilis nisi vitae.",
+    link: "/",
   },
   {
     id: 3,
@@ -251,6 +277,7 @@ export const bibleStudyEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
+    link: "/",
   },
   {
     id: 4,
@@ -263,5 +290,6 @@ export const bibleStudyEvents = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, blanditiis.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
+    link: "/",
   },
 ];
