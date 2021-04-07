@@ -41,7 +41,7 @@ const Navbar = ({ links = [], programs = [] }) => {
               setOpen(false);
             }}
           >
-            <Image src={logo} width='60' height='60' />
+            <Image src={logo} width='60' height='60' priority />
           </Link>
         </h1>
 
