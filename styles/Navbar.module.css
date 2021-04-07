@@ -1,9 +1,12 @@
 .container {
-  background-color: #0008;
+  background-color: #000;
   position: absolute;
   color: white;
   z-index: 999;
   width: 100%;
+  filter: opacity(85%);
+  padding: 3px 0;
+  height: 4.125rem;
 }
 
 .navbar {
@@ -11,12 +14,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.1em 1em;
+  padding: 0em 1em;
   margin: 0 auto;
   max-width: var(--max-width);
   z-index: 999;
-  height: 50px;
   color: white;
+  filter: opacity(100%);
 }
 
 .logo > a {
@@ -42,7 +45,7 @@
 }
 
 .open {
-  top: 3rem;
+  top: 3.9375rem;
   opacity: 1;
   transition: var(--transition);
   pointer-events: all;
@@ -130,7 +133,7 @@
 
   .openSubmenu {
     opacity: 1;
-    top: 2.7rem;
+    top: 3.05rem;
     transition: var(--transition);
   }
 

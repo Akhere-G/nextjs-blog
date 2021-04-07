@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from "../../styles/Navbar.module.css";
 import { Menu } from "@material-ui/icons";
@@ -8,6 +9,13 @@ const Navbar = ({ links = [], programs = [] }) => {
   const [open, setOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const { pathname } = useRouter();
+
+  let currentPage = links.find(link => link.slug === pathname);
+  currentPage =
+    currentPage || programs.find(program => program.slug === pathname);
+
+  const colour = currentPage?.colour ?? "000";
+  const logo = currentPage?.logo ?? "./logo.jpeg";
 
   return (
     <header
@@ -22,6 +30,7 @@ const Navbar = ({ links = [], programs = [] }) => {
           setIsSubmenuOpen(false);
         }
       }}
+      style={{ backgroundColor: colour }}
     >
       <nav className={styles.navbar}>
         <h1 className={styles.logo}>
@@ -32,7 +41,7 @@ const Navbar = ({ links = [], programs = [] }) => {
               setOpen(false);
             }}
           >
-            Logo
+            <Image src={logo} width='60' height='60' />
           </Link>
         </h1>
 

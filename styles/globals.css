@@ -1,7 +1,7 @@
 :root {
   --primary: #111;
-  --primary-light: #222d;
-  --primary-dark: #000d;
+  --primary-light: #222;
+  --primary-dark: #000;
   --secondary: #f8f8f8;
   --secondary-light: #fff;
   --secondary-dark: #ddd;
@@ -14,6 +14,9 @@
   --transition: all linear 300ms;
 }
 
+img {
+  background-attachment: fixed;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -47,9 +50,6 @@ a {
   color: var(--primary);
 }
 
-img {
-  filter: saturate(0%);
-}
 .link {
   color: var(--focus-dark);
 }

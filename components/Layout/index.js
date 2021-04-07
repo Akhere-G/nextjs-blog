@@ -1,21 +1,42 @@
 import { Navbar, Footer, Meta } from "..";
 import styles from "../../styles/Layout.module.css";
-
+import { useRouter } from "next/router";
 const links = [
-  { name: "Home", slug: "/" },
-  { name: "About", slug: "/about" },
-  { name: "Contact", slug: "/contact" },
-  { name: "Donate", slug: "/donate" },
+  { name: "Home", slug: "/", colour: "#000", logo: "/logo.jpeg" },
+  { name: "About", slug: "/about", colour: "#000", logo: "/logo.jpeg" },
+  { name: "Contact", slug: "/contact", colour: "#000", logo: "/logo.jpeg" },
+  { name: "Donate", slug: "/donate", colour: "#000", logo: "/logo.jpeg" },
 ];
 
 const programs = [
-  { name: "Give Blood", slug: "/give-blood" },
-  { name: "Give Back", slug: "/give-back" },
-  { name: "Worship", slug: "/worship" },
-  { name: "Bible Study", slug: "/bible-study" },
+  {
+    name: "Give Blood",
+    slug: "/give-blood",
+    colour: "#9F2B2C",
+    logo: "/giveBloodLogo.jpeg",
+  },
+  {
+    name: "Give Back",
+    slug: "/give-back",
+    colour: "#690393",
+    logo: "/giveBackLogo.jpeg",
+  },
+  {
+    name: "Worship",
+    slug: "/worship",
+    colour: "#431FDF",
+    logo: "/worshipLogo.jpeg",
+  },
+  {
+    name: "Bible Study",
+    slug: "/bible-study",
+    colour: "#0B0201",
+    logo: "/bibleStudyLogo.jpeg",
+  },
 ];
 
 const Layout = ({ children }) => {
+  const { pathname } = useRouter();
   return (
     <>
       <Meta />
