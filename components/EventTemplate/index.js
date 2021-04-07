@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 import { Schedule, PinDrop, Book } from "@material-ui/icons";
 import styles from "../../styles/SingleEvent.module.css";
 
