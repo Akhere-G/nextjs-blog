@@ -24,6 +24,20 @@ const Navbar = ({ links = [], programs = [] }) => {
 
   const colour = currentPage?.colour ?? "000";
 
+  let logo;
+
+  if (pathname.startsWith("/give-blood")) {
+    logo = "/giveBloodLogo.jpeg";
+  } else if (pathname.startsWith("/give-back")) {
+    logo = "/giveBackLogo.jpeg";
+  } else if (pathname.startsWith("/worship")) {
+    logo = "/worshipLogo.jpeg";
+  } else if (pathname.startsWith("/bible-study")) {
+    logo = "/bibleStudyLogo.jpeg";
+  } else {
+    logo = "/logo.jpeg";
+  }
+
   return (
     <header
       className={styles.container}
@@ -48,43 +62,7 @@ const Navbar = ({ links = [], programs = [] }) => {
               setOpen(false);
             }}
           >
-            <>
-              {pathname.startsWith("/give-blood") && (
-                <Image
-                  src='/giveBloodLogo.jpeg'
-                  width='60'
-                  height='60'
-                  priority
-                />
-              )}
-              {pathname.startsWith("/give-back") && (
-                <Image
-                  src='/giveBackLogo.jpeg'
-                  width='60'
-                  height='60'
-                  priority
-                />
-              )}
-              {pathname.startsWith("/worship") && (
-                <Image
-                  src='/worshipLogo.jpeg'
-                  width='60'
-                  height='60'
-                  priority
-                />
-              )}
-              {pathname.startsWith("/bible-study") && (
-                <Image
-                  src='/bibleStudyLogo.jpeg'
-                  width='60'
-                  height='60'
-                  priority
-                />
-              )}
-              {links.map(l => l.slug).includes(pathname) && (
-                <Image src='/logo.jpeg' width='60' height='60' priority />
-              )}
-            </>
+            <Image src={logo} width='60' height='60' priority />
           </Link>
         </h1>
 
