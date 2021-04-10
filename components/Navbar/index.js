@@ -10,12 +10,19 @@ const Navbar = ({ links = [], programs = [] }) => {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const { pathname } = useRouter();
 
-  let currentPage = links.find(link => link.slug === pathname);
-  currentPage =
-    currentPage || programs.find(program => program.slug === pathname);
+  let currentPage;
+
+  if (pathname === "/") {
+    currentPage = links.find(link => link.slug === "/");
+  } else {
+    currentPage = links.find(link => link.slug === pathname);
+
+    currentPage =
+      currentPage ||
+      programs.find(program => pathname.startsWith(program.slug));
+  }
 
   const colour = currentPage?.colour ?? "000";
-  const logo = currentPage?.logo ?? "./logo.jpeg";
 
   return (
     <header
@@ -41,7 +48,43 @@ const Navbar = ({ links = [], programs = [] }) => {
               setOpen(false);
             }}
           >
-            <Image src={logo} width='60' height='60' priority />
+            <>
+              {pathname.startsWith("/give-blood") && (
+                <Image
+                  src='/giveBloodLogo.jpeg'
+                  width='60'
+                  height='60'
+                  priority
+                />
+              )}
+              {pathname.startsWith("/give-back") && (
+                <Image
+                  src='/giveBackLogo.jpeg'
+                  width='60'
+                  height='60'
+                  priority
+                />
+              )}
+              {pathname.startsWith("/worship") && (
+                <Image
+                  src='/worshipLogo.jpeg'
+                  width='60'
+                  height='60'
+                  priority
+                />
+              )}
+              {pathname.startsWith("/bible-study") && (
+                <Image
+                  src='/bibleStudyLogo.jpeg'
+                  width='60'
+                  height='60'
+                  priority
+                />
+              )}
+              {links.map(l => l.slug).includes(pathname) && (
+                <Image src='/logo.jpeg' width='60' height='60' priority />
+              )}
+            </>
           </Link>
         </h1>
 
