@@ -75,8 +75,8 @@ const Navbar = ({ links = [], programs = [] }) => {
             {links.map(l => l.slug).includes(pathname) && (
               <Image src='/logo.jpeg' width='60' height='60' priority />
             )}
-            {!links.map(l => l.slug).includes(pathname) &&
-              !programs.map(p => p.slug).includes(pathname) && (
+            {links.every(l => l.slug !== pathname) &&
+              programs.every(p => !pathname.startsWith(p.slug)) && (
                 <Image src='/logo.jpeg' width='60' height='60' priority />
               )}
           </>
