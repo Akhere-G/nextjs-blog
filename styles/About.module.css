@@ -1,0 +1,43 @@
+.images {
+  display: flex;
+}
+
+.info {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+}
+
+.info p {
+  margin: 1rem auto;
+}
+
+.mantras {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.mantras > * {
+  transition: var(--transition);
+}
+.mantras > :hover {
+  transition: var(--transition);
+  transform: rotateY(10deg);
+}
+
+.mantraRight {
+  align-self: flex-end;
+  transition: var(--transition);
+}
+
+.mantraRight:hover {
+  transform: rotateY(-10deg);
+}
+
+@media screen and (max-width: 600px) {
+  .images {
+    flex-direction: column;
+  }
+}

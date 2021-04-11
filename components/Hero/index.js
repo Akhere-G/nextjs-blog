@@ -1,7 +1,21 @@
 import React, { useRef, useEffect } from "react";
 import styles from "../../styles/Hero.module.css";
 
-const Hero = ({ image = "/hero.jpg" }) => {
+const title = "Community";
+const paragraphs = [
+  `  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque aut
+deserunt architecto expedita aperiam? Exercitationem veritatis suscipit
+tempora molestiae provident harum aspernatur placeat consequuntur
+praesentium officia necessitatibus corrupti eos debitis eveniet,
+deserunt rem corporis quam quasi, numquam similique! Veniam, minus.`,
+  `  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque aut
+deserunt architecto expedita aperiam? Exercitationem veritatis suscipit
+tempora molestiae provident harum aspernatur placeat consequuntur
+praesentium officia necessitatibus corrupti eos debitis eveniet,
+deserunt rem corporis quam quasi, numquam similique! Veniam, minus.`,
+];
+
+const Hero = ({ image, title, paragraphs }) => {
   const heroRef = useRef();
 
   useEffect(() => {
@@ -10,23 +24,32 @@ const Hero = ({ image = "/hero.jpg" }) => {
 
   return (
     <article className={styles.hero} ref={heroRef}>
-      <h2 className={styles.title}>Community</h2>
-      <p className={styles.paragraph}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque aut
-        deserunt architecto expedita aperiam? Exercitationem veritatis suscipit
-        tempora molestiae provident harum aspernatur placeat consequuntur
-        praesentium officia necessitatibus corrupti eos debitis eveniet,
-        deserunt rem corporis quam quasi, numquam similique! Veniam, minus.
-      </p>
-      <p className={styles.paragraph}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque aut
-        deserunt architecto expedita aperiam? Exercitationem veritatis suscipit
-        tempora molestiae provident harum aspernatur placeat consequuntur
-        praesentium officia necessitatibus corrupti eos debitis eveniet,
-        deserunt rem corporis quam quasi, numquam similique! Veniam, minus.
-      </p>
+      <h2 className={styles.title}>{title}</h2>
+
+      {paragraphs.map((paragraph, index) => (
+        <p key={index} className={styles.paragraph}>
+          {paragraph}
+        </p>
+      ))}
     </article>
   );
 };
 
+Hero.defaultProps = {
+  title: "Community",
+  paragraphs: [
+    `  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque aut
+deserunt architecto expedita aperiam? Exercitationem veritatis suscipit
+tempora molestiae provident harum aspernatur placeat consequuntur
+praesentium officia necessitatibus corrupti eos debitis eveniet,
+deserunt rem corporis quam quasi, numquam similique! Veniam, minus.`,
+    `  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque aut
+deserunt architecto expedita aperiam? Exercitationem veritatis suscipit
+tempora molestiae provident harum aspernatur placeat consequuntur
+praesentium officia necessitatibus corrupti eos debitis eveniet,
+deserunt rem corporis quam quasi, numquam similique! Veniam, minus.`,
+  ],
+
+  image: "/hero.jpg",
+};
 export default Hero;
