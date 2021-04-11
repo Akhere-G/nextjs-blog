@@ -16,6 +16,7 @@
 .footerLeft {
   border-right: 1px solid #334;
   margin-right: 1rem;
+  padding-right: 1rem;
   flex-basis: 65%;
 }
 
@@ -44,9 +45,18 @@
   display: flex;
   justify-content: space-between;
 }
+
 .social {
   color: white;
+  transition: var(--transition);
   margin-right: 1rem;
+}
+
+.social:hover,
+.social:focus,
+.social:active {
+  color: var(--focus-dark);
+  transition: var(--transition);
 }
 
 .footerRight h2 {
