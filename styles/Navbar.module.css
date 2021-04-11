@@ -22,11 +22,6 @@
   filter: opacity(100%);
 }
 
-.logo > a {
-  font-size: 2rem;
-  color: white;
-}
-
 .navbarLinks {
   position: absolute;
   right: 0;

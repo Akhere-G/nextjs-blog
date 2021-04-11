@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 import styles from "../../styles/Navbar.module.css";
 import { Menu } from "@material-ui/icons";
 
+const mainPages = ["/", "/about", "/contact", "/donate"];
+
 const Navbar = ({ links = [], programs = [] }) => {
   const [open, setOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
@@ -24,20 +26,6 @@ const Navbar = ({ links = [], programs = [] }) => {
 
   const colour = currentPage?.colour ?? "000";
 
-  let logo;
-
-  if (pathname.startsWith("/give-blood")) {
-    logo = "/giveBloodLogo.jpeg";
-  } else if (pathname.startsWith("/give-back")) {
-    logo = "/giveBackLogo.jpeg";
-  } else if (pathname.startsWith("/worship")) {
-    logo = "/worshipLogo.jpeg";
-  } else if (pathname.startsWith("/bible-study")) {
-    logo = "/bibleStudyLogo.jpeg";
-  } else {
-    logo = "/logo.jpeg";
-  }
-
   return (
     <header
       className={styles.container}
@@ -54,17 +42,45 @@ const Navbar = ({ links = [], programs = [] }) => {
       style={{ backgroundColor: colour }}
     >
       <nav className={styles.navbar}>
-        <h1 className={styles.logo}>
-          <Link
-            href='/'
-            className={styles.logo}
-            onClick={() => {
-              setOpen(false);
-            }}
-          >
-            <Image src={logo} width='60' height='60' priority />
-          </Link>
-        </h1>
+        <Link
+          href='/'
+          className={styles.logo}
+          onClick={() => {
+            setOpen(false);
+          }}
+        >
+          <>
+            {pathname.startsWith("/give-blood") && (
+              <Image
+                src='/giveBloodLogo.jpeg'
+                width='60'
+                height='60'
+                priority
+              />
+            )}
+            {pathname.startsWith("/give-back") && (
+              <Image src='/giveBackLogo.jpeg' width='60' height='60' priority />
+            )}
+            {pathname.startsWith("/worship") && (
+              <Image src='/worshipLogo.jpeg' width='60' height='60' priority />
+            )}
+            {pathname.startsWith("/bible-study") && (
+              <Image
+                src='/bibleStudyLogo.jpeg'
+                width='60'
+                height='60'
+                priority
+              />
+            )}
+            {links.map(l => l.slug).includes(pathname) && (
+              <Image src='/logo.jpeg' width='60' height='60' priority />
+            )}
+            {!links.map(l => l.slug).includes(pathname) &&
+              !programs.map(p => p.slug).includes(pathname) && (
+                <Image src='/logo.jpeg' width='60' height='60' priority />
+              )}
+          </>
+        </Link>
 
         <ul className={`${styles.navbarLinks} ${open ? styles.open : ""}`}>
           {links.map((link, index) => {
