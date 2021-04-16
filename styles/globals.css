@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 :root {
   --primary: #111;
   --primary-light: #222;
@@ -14,9 +15,6 @@
   --transition: all linear 300ms;
 }
 
-img {
-  background-attachment: fixed;
-}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -25,7 +23,7 @@ img {
 
 html,
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 100%;
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -43,6 +41,10 @@ h4,
 h5,
 h6 {
   font-weight: 400;
+}
+
+img {
+  background-attachment: fixed;
 }
 
 a {
