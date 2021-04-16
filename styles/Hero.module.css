@@ -17,6 +17,7 @@
   width: 100%;
   max-width: var(--max-width);
   margin: auto;
+  font-size: 1.8rem;
 }
 
 .paragraph {
