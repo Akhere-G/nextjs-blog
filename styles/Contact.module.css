@@ -1,0 +1,92 @@
+.form {
+  position: relative;
+  padding: 1rem;
+  margin: 1rem auto 3rem auto;
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.formGroup {
+  width: 100%;
+  margin-bottom: 1rem !important;
+}
+
+.formButton {
+  background-color: var(--primary) !important;
+  color: white !important;
+  transition: var(--transition) !important;
+  border: 1px solid !important;
+  border-color: black !important;
+}
+
+.formButton:hover,
+.formButton:focus,
+.formButton:active {
+  background-color: var(--primary-dark) !important;
+  color: var(--focus) !important;
+  transition: var(--transition) !important;
+  border-color: var(--focus) !important;
+}
+
+.formButton::after {
+  content: "";
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: var(--primary);
+  width: 20%;
+  height: 75%;
+  right: 4px;
+  border-radius: 1px;
+  position: absolute;
+  transition: var(--transition) !important;
+}
+
+.formButton::before {
+  content: "";
+  border-left: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: var(--primary);
+  width: 20%;
+  height: 75%;
+  left: 4px;
+  border-radius: 1px;
+  position: absolute;
+  transition: var(--transition) !important;
+}
+
+.formButton:hover::after,
+.formButton:focus::after,
+.formButton:active::after,
+.formButton:hover::before,
+.formButton:focus::before,
+.formButton:active::before {
+  border-color: var(--focus);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  background-color: var(--focus);
+  padding: 1rem;
+  border-radius: 4px;
+  position: absolute;
+  top: 16rem;
+  opacity: 0;
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.info > p {
+  margin-left: 1rem;
+}
+
+.show {
+  opacity: 1;
+  top: 0rem;
+  transition: var(--transition) !important;
+  z-index: 999;
+}
