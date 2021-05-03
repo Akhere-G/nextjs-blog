@@ -82,7 +82,7 @@ const Contact = () => {
           </Button>
           <div className={`${styles.info} ${show && styles.show}`}>
             <Info />
-            <p>Thanks! You're query has been sent to us</p>
+            <p>Thanks! Your query has been sent to us</p>
           </div>
         </Form>
       )}
