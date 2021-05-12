@@ -38,12 +38,12 @@
   opacity: 1;
 }
 .placePrev {
-  translate: 100%;
+  translate: -100%;
   opacity: 0;
   transition: var(--transition);
 }
 .placePost {
-  translate: -100%;
+  translate: 100%;
   opacity: 0;
   transition: var(--transition);
 }
