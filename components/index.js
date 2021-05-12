@@ -4,6 +4,7 @@ export { default as Footer } from "./Footer";
 export { default as Meta } from "./Meta";
 export { default as Hero } from "./Hero";
 export { default as Cards } from "./Cards";
+export { default as Carousel } from "./Carousel";
 export { default as Events } from "./Events";
 export { default as EventTemplate } from "./EventTemplate";
 export { default as FormTextField } from "./FormTextField";

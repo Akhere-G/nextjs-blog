@@ -1,0 +1,83 @@
+.carousel {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: calc(200px + 1rem);
+  max-width: var(--max-width);
+  margin: auto;
+  justify-content: space-between;
+}
+
+.leftArrow {
+  left: 0;
+}
+
+.rightArrow {
+  right: 0;
+}
+
+.leftArrow,
+.rightArrow {
+  z-index: 1;
+  background-color: #0008;
+  color: white;
+  height: 50%;
+  margin: auto 0;
+}
+
+.leftArrow:hover,
+.rightArrow:hover {
+  background-color: #000d;
+  color: var(--focus);
+  cursor: pointer;
+}
+
+.placeMain {
+  translate: 0%;
+  transition: var(--transition);
+  opacity: 1;
+}
+.placePrev {
+  translate: 100%;
+  opacity: 0;
+  transition: var(--transition);
+}
+.placePost {
+  translate: -100%;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  padding: 1rem 4rem;
+}
+
+.card > p {
+  padding-left: 1rem;
+  flex: 1;
+}
+
+.card > * {
+  max-width: 90%;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card > p {
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
+  .carousel {
+    min-height: 400px;
+  }
+}
