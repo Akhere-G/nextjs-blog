@@ -1,14 +1,19 @@
 import React from "react";
 import styles from "../../styles/Footer.module.css";
 import Link from "next/link";
-import { Phone, Email, Facebook, Twitter, Instagram } from "@material-ui/icons";
+import { Email, LinkedIn, Instagram } from "@material-ui/icons";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
 const socials = [
-  { link: "https://facebook.com", Icon: Facebook },
-  { link: "https://twitter.com", Icon: Twitter },
-  { link: "https://instagram.com", Icon: Instagram },
+  {
+    link: "https://uk.linkedin.com/company/community-the-hands-and-feet-of-jesus?trk=public_profile_topcard-current-company",
+    Icon: LinkedIn,
+  },
+  {
+    link: "https://instagram.com/com.munity?igshid=1t0frdo7iupr5",
+    Icon: Instagram,
+  },
 ];
 const Footer = ({ links = [], programs = [] }) => {
   const { pathname } = useRouter();
@@ -16,19 +21,20 @@ const Footer = ({ links = [], programs = [] }) => {
     <div className={styles.container}>
       <div className={styles.footer}>
         <div className={styles.footerLeft}>
-          <h2>Logo</h2>
+          <Image src='/logo.jpeg' width={150} height={150} />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint,
-            debitis ad! Possimus, deleniti omnis? Tempora recusandae quod
-            debitis quae alias!
+            WE are the hands and feet of Jesus; empowering, equipping and
+            building up communities by spreading The Word and running outreach
+            programs
           </p>
-          <div className={styles.contactCard}>
-            <Phone size='small' />
+          {/* TODO: Add phone number */}
+          {/* <div className={styles.contactCard}>
+            <Phone size='small' /> 
             <p>123-456-789</p>
-          </div>
+          </div> */}
           <div className={styles.contactCard}>
             <Email size='small' />
-            <p>example@example.co.uk</p>
+            <p>Enquires@communitythaf.com</p>
           </div>
           <div className={styles.socials}>
             <h2>Contact Us</h2>
