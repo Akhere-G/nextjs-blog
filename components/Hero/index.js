@@ -24,13 +24,17 @@ const Hero = ({ image, title, paragraphs }) => {
 
   return (
     <article className={styles.hero} ref={heroRef}>
-      <h1 className={styles.title}>{title}</h1>
+      {title && <h1 className={styles.title}>{title}</h1>}
 
-      {paragraphs.map((paragraph, index) => (
-        <p key={index} className={styles.paragraph}>
-          {paragraph}
-        </p>
-      ))}
+      {paragraphs &&
+        paragraphs.map(
+          (paragraph, index) =>
+            paragraph && (
+              <p key={index} className={styles.paragraph}>
+                {paragraph}
+              </p>
+            )
+        )}
     </article>
   );
 };
