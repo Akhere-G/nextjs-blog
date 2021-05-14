@@ -2,22 +2,14 @@
   padding: 5rem 1rem 1rem 1rem;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 1rem;
   max-width: var(--max-width);
 }
 
-.event > p {
-  margin-left: 1rem;
-}
-
-.eventReversed {
-  flex-direction: row-reverse;
-}
-
-.eventReversed > p {
-  margin-right: 1rem;
-  margin-left: 0;
+.header {
+  display: flex;
+  padding-bottom: 1rem;
 }
 .image {
   flex: 0.8;
@@ -40,6 +32,7 @@
 .detail {
   display: flex;
   margin-bottom: 0.5rem;
+  align-items: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -47,15 +40,16 @@
     margin-left: 0.5rem;
   }
 
-  .event,
-  .eventReversed {
+  .event {
     padding: 0rem;
-
-    flex-direction: column;
   }
-  .event p,
-  .eventReversed p {
-    margin: 0;
+
+  .image {
+    padding-bottom: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
   }
 
   .image {
@@ -64,6 +58,10 @@
 
   .details {
     flex: 1;
-    padding: 0rem 0.5rem;
+    padding: 0;
+  }
+
+  .text {
+    padding: 0 1rem;
   }
 }
