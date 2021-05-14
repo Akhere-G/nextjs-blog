@@ -46,7 +46,7 @@ export const getStaticProps = async context => {
   }));
 
   const event = events.find(event => event.slug === slug);
-  return { props: { ...event } };
+  return { props: { ...event }, revalidate: 10 };
 };
 
 export default WorshipEvent;
