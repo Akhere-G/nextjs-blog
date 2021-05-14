@@ -1,15 +1,10 @@
 import React from "react";
 
-import { bibleStudyEvents } from "../../data";
 import { EventTemplate } from "../../components";
+import { createClient } from "contentful";
 
-const BibleStudyEvent = ({ title, location, time, src, text, link }) => {
-  return (
-    <EventTemplate
-      program='bible-study'
-      {...{ title, location, time, src, text, link }}
-    />
-  );
+const BibleStudyEvent = props => {
+  return <EventTemplate program='bible-study' {...props} />;
 };
 
 export const getStaticPaths = async () => {
@@ -18,8 +13,14 @@ export const getStaticPaths = async () => {
 
   //const { events } = data;
 
-  const slugs = bibleStudyEvents.map(event => event.slug);
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  });
 
+  const res = await client.getEntries({ content_type: "event" });
+  const events = res.items.filter(item => item.fields.program == "bible-study");
+  const slugs = events.map(event => event.fields.slug);
   const paths = slugs.map(slug => ({ params: { slug } }));
 
   return {
@@ -31,10 +32,24 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async context => {
   const slug = context.params.slug;
 
-  //const res = await fetch(`${server}/api/events/${slug}`);
-  //const { event } = await res.json();
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  });
 
-  const event = bibleStudyEvents.find(event => event.slug === slug);
+  const res = await client.getEntries({ content_type: "event" });
+  let events = res.items.filter(item => item.fields.program == "bible-study");
+  events = events.map(event => ({
+    ...event.fields,
+    src: `https:${event.fields.src.fields.file.url}`,
+    srcSize: {
+      width: event.fields.src.fields.file.details.image.width,
+      height: event.fields.src.fields.file.details.image.height,
+    },
+    id: event.sys.id,
+  }));
+
+  const event = events.find(event => event.slug === slug);
   return { props: { ...event } };
 };
 export default BibleStudyEvent;
