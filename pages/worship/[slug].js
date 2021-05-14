@@ -1,15 +1,13 @@
 import React from "react";
 
-import { EventTemplate } from "../../components";
+import { EventTemplate, Skeleton } from "../../components";
 import { createClient } from "contentful";
 
-const WorshipEvent = ({ title, location, time, src, text, link }) => {
-  return (
-    <EventTemplate
-      program='worship'
-      {...{ title, location, time, src, text, link }}
-    />
-  );
+const WorshipEvent = ({ event }) => {
+  if (!event) {
+    return <Skeleton />;
+  }
+  return <EventTemplate program='worship' {...event} />;
 };
 
 export const getStaticPaths = async () => {
@@ -25,28 +23,38 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
-export const getStaticProps = async context => {
-  const slug = context.params.slug;
-
+export const getStaticProps = async ({ params }) => {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const res = await client.getEntries({ content_type: "event" });
-  let events = res.items.filter(item => item.fields.program === "worship");
-  events = events.map(event => ({
+  const res = await client.getEntries({
+    content_type: "event",
+    "fields.slug": params.slug,
+  });
+
+  if (!res.items.length) {
+    return {
+      redirect: {
+        destination: "/worship",
+        permanent: false,
+      },
+    };
+  }
+
+  const event = res.items[0];
+
+  const eventProps = {
     ...event.fields,
     src: `https:${event.fields.src.fields.file.url}`,
     id: event.sys.id,
-  }));
+  };
 
-  const event = events.find(event => event.slug === slug);
-  return { props: { ...event }, revalidate: 10 };
+  return { props: { event: eventProps }, revalidate: 10 };
 };
-
 export default WorshipEvent;
