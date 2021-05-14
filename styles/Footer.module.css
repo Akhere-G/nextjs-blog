@@ -89,3 +89,16 @@
 .footer a {
   color: #eeed;
 }
+
+@media screen and (max-width: 400px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footerLeft {
+    border-right: none;
+    margin-right: 0rem;
+    padding-right: 0rem;
+    flex-basis: initial;
+  }
+}
