@@ -24,7 +24,6 @@ export const getStaticProps = async () => {
     src: `https:${event.fields.src.fields.file.url}`,
     id: event.sys.id,
   }));
-  console.log(events);
   return {
     props: { events },
   };

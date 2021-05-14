@@ -29,7 +29,6 @@ export const getStaticProps = async () => {
     },
     id: event.sys.id,
   }));
-  console.log(events);
   return {
     props: { events },
   };

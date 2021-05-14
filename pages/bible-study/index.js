@@ -4,7 +4,6 @@ import { Hero, Events } from "../../components";
 import { createClient } from "contentful";
 
 const BibleStudyPage = ({ events }) => {
-  console.log(events);
   return (
     <>
       <Hero image='volunteer.jpg' />
@@ -26,7 +25,6 @@ export const getStaticProps = async () => {
     src: `https:${event.fields.src.fields.file.url}`,
     id: event.sys.id,
   }));
-  console.log(events);
   return {
     props: { events },
   };
