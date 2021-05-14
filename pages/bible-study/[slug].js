@@ -1,10 +1,13 @@
 import React from "react";
 
-import { EventTemplate } from "../../components";
+import { EventTemplate, Skeleton } from "../../components";
 import { createClient } from "contentful";
 
-const BibleStudyEvent = props => {
-  return <EventTemplate program='bible-study' {...props} />;
+const BibleStudyEvent = ({ event }) => {
+  if (!event) {
+    return <Skeleton />;
+  }
+  return <EventTemplate program='bible-study' {...event} />;
 };
 
 export const getStaticPaths = async () => {
@@ -22,7 +25,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -43,6 +46,6 @@ export const getStaticProps = async context => {
   }));
 
   const event = events.find(event => event.slug === slug);
-  return { props: { ...event }, revalidate: 10 };
+  return { props: { event }, revalidate: 10 };
 };
 export default BibleStudyEvent;

@@ -14,18 +14,6 @@
   margin-bottom: 1rem;
 }
 
-.event > p {
-  margin-left: 1rem;
-}
-
-.eventReversed {
-  flex-direction: row-reverse;
-}
-
-.eventReversed > p {
-  margin-right: 1rem;
-  margin-left: 0;
-}
 .image {
   flex: 0.6;
   min-width: 200px;
@@ -50,13 +38,12 @@
 }
 
 @media screen and (max-width: 600px) {
-  .event,
-  .eventReversed {
+  .event {
     flex-direction: column;
   }
-  .event > p,
-  .eventReversed > p {
-    margin: 0;
+
+  .image {
+    margin-bottom: 1rem;
   }
 
   .details {

@@ -8,3 +8,4 @@ export { default as Carousel } from "./Carousel";
 export { default as Events } from "./Events";
 export { default as EventTemplate } from "./EventTemplate";
 export { default as FormTextField } from "./FormTextField";
+export { default as Skeleton } from "./Skeleton";
