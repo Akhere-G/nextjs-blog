@@ -2,12 +2,42 @@
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 4rem 1rem;
+  overflow: hidden;
 }
 
 .skeleton > div {
   background-color: #dbdcdc;
   border-radius: 4px;
   margin: 1.25rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton > div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -150px;
+  top: 0;
+  height: 100%;
+  width: 150px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #c8c8c8 50%,
+    transparent 100%
+  );
+  animation: load 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes load {
+  0% {
+    left: -150px;
+  }
+
+  100% {
+    left: 100%;
+  }
 }
 
 .sbanner {
