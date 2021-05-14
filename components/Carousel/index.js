@@ -39,24 +39,13 @@ const Carousel = () => {
     <div className={styles.carousel}>
       <button
         className={styles.leftArrow}
-        disableFocusRipple
-        disableTouchRipple
-        disableRipple
         onClick={() =>
           setPlace(prev => (prev + cards.length - 1) % cards.length)
         }
       >
         <ChevronLeft />
       </button>
-      <button
-        className={styles.rightArrow}
-        disableFocusRipple
-        disableTouchRipple
-        disableRipple
-        onClick={() => setPlace(prev => (prev + 1) % cards.length)}
-      >
-        <ChevronRight />
-      </button>
+
       {cards.map((card, index) => {
         const { image, text } = card;
 
@@ -77,6 +66,12 @@ const Carousel = () => {
           </section>
         );
       })}
+      <button
+        className={styles.rightArrow}
+        onClick={() => setPlace(prev => (prev + 1) % cards.length)}
+      >
+        <ChevronRight />
+      </button>
     </div>
   );
 };
