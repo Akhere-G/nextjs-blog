@@ -26,6 +26,7 @@ export const getStaticProps = async () => {
   }));
   return {
     props: { events },
+    revalidate: 10,
   };
 };
 export default GiveBloodPage;
