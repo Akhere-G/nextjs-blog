@@ -101,4 +101,10 @@
     padding-right: 0rem;
     flex-basis: initial;
   }
+
+  .footerRight {
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid #334;
+  }
 }
