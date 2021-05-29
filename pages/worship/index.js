@@ -2,10 +2,18 @@ import React from "react";
 import { Hero, Events } from "../../components";
 import { createClient } from "contentful";
 
+const paragraphs = [
+  `Worship is at the heart of everything we do. We create authentic worships spaces for people of all backgrounds and denominations to worship God in intimacy and truth.`,
+  `Made A Way- A worship Experience
+An evening of worship and intimacy with the Father as we celebrate His perfect grace.`,
+  `We are excited to partner with The Gift U.K. to present a worship experience for the masses. We are grateful to international artist, Emmanuel Smith and Becca Folkes for leading our worship night. 
+`,
+];
+
 const WorshipPage = ({ events }) => {
   return (
     <>
-      <Hero image='volunteer.jpg' />
+      <Hero image='volunteer.jpg' title='Worship' paragraphs={paragraphs} />
       <Events program='worship' events={events} />
     </>
   );
