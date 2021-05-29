@@ -52,41 +52,43 @@ const Contact = () => {
   });
 
   return (
-    <Formik
-      initialValues={{ ...data }}
-      enableReinitialize={true}
-      onSubmit={handleSubmit}
-      validationSchema={validationSchema}
-    >
-      {(values, isSubmitting, errors) => (
-        <Form className={styles.form}>
-          <h1>Contact Us</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fugit
-            facere eveniet tempora vero maxime corrupti? Qui nihil suscipit,
-            iure doloremque dicta eaque maiores placeat, quisquam quibusdam
-            culpa nemo et architecto perspiciatis ad veritatis at, impedit error
-            aliquid! Sunt, modi.
-          </p>
-          <FormTextField name='name' id='name' placeholder='name' />
-          <FormTextField name='email' id='email' placeholder='email' />
-          <FormTextField name='subject' id='subject' placeholder='subject' />
-          <FormTextField
-            name='query'
-            id='query'
-            placeholder='query'
-            multiline
-          />
-          <Button type='submit' className={styles.formButton}>
-            Submit
-          </Button>
-          <div className={`${styles.info} ${show && styles.show}`}>
-            <Info />
-            <p>Thanks! Your query has been sent to us</p>
-          </div>
-        </Form>
-      )}
-    </Formik>
+    <div className={styles.container}>
+      <Formik
+        initialValues={{ ...data }}
+        enableReinitialize={true}
+        onSubmit={handleSubmit}
+        validationSchema={validationSchema}
+      >
+        {(values, isSubmitting, errors) => (
+          <Form className={styles.form}>
+            <h1>Contact Us</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+              fugit facere eveniet tempora vero maxime corrupti? Qui nihil
+              suscipit, iure doloremque dicta eaque maiores placeat, quisquam
+              quibusdam culpa nemo et architecto perspiciatis ad veritatis at,
+              impedit error aliquid! Sunt, modi.
+            </p>
+            <FormTextField name='name' id='name' placeholder='name' />
+            <FormTextField name='email' id='email' placeholder='email' />
+            <FormTextField name='subject' id='subject' placeholder='subject' />
+            <FormTextField
+              name='query'
+              id='query'
+              placeholder='query'
+              multiline
+            />
+            <Button type='submit' className={styles.formButton}>
+              Submit
+            </Button>
+            <div className={`${styles.info} ${show && styles.show}`}>
+              <Info />
+              <p>Thanks! Your query has been sent to us</p>
+            </div>
+          </Form>
+        )}
+      </Formik>
+    </div>
   );
 };
 
