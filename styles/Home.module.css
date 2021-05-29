@@ -5,6 +5,10 @@
   padding-bottom: 4rem;
 }
 
+.section > h2 {
+  padding-bottom: 1rem;
+}
+
 .container::after {
   content: "";
   top: 0;
