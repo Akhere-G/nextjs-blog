@@ -52,8 +52,6 @@
   .mantras {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
-    margin-right: 3rem;
-    margin-left: 3rem;
   }
 
   .mantra:hover,
