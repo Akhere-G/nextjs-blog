@@ -19,33 +19,47 @@
 .about > h2 {
   margin-left: 1rem;
 }
+
+.about > h2,
+.info > h2 {
+  text-align: center;
+}
 .mantras {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   margin-top: 1rem;
-  padding: 1rem;
-  text-align: left;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
 }
 
-.mantras > * {
-  transition: var(--transition);
-}
-.mantras > :hover {
-  transition: var(--transition);
-  transform: rotateY(10deg);
-}
-
+.mantra,
 .mantraRight {
-  align-self: flex-end;
   transition: var(--transition);
+  box-shadow: 2px 3px 4px #1118;
+  position: relative;
+}
+
+.mantra:hover {
+  transform: rotateY(30deg);
 }
 
 .mantraRight:hover {
-  transform: rotateY(-10deg);
+  transform: rotateY(-30deg);
 }
 
-@media screen and (max-width: 600px) {
-  .images {
-    flex-direction: column;
+@media screen and (max-width: 800px) {
+  .mantras {
+    display: grid;
+    margin-top: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+
+  .mantra:hover,
+  .mantraRight:hover {
+    transform: none;
   }
 }

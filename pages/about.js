@@ -21,6 +21,15 @@ const cards = [
   },
 ];
 
+const Images = [
+  "/mantra 1.png",
+  "/mantra 2.png",
+  "/mantra 3.png",
+  "/mantra 4.png",
+  "/mantra 5.png",
+  "/mantra 6.png",
+];
+
 const About = () => {
   return (
     <div className={styles.container}>
@@ -31,30 +40,23 @@ const About = () => {
         <article className={styles.info}>
           <h2>Mantras</h2>
           <section className={styles.mantras}>
-            <div>
-              <Image
-                src='/mantra1.png'
-                width={250}
-                height={250}
-                layout='intrinsic'
-              />
-            </div>
-            <div className={styles.mantraRight}>
-              <Image
-                src='/mantra2.jpg'
-                width={250}
-                height={250}
-                layout='intrinsic'
-              />
-            </div>
-            <div>
-              <Image
-                src='/mantra3.png'
-                width={250}
-                height={250}
-                layout='intrinsic'
-              />
-            </div>
+            {Images.map((image, index) => {
+              return (
+                <div
+                  className={
+                    index % 2 === 0 ? styles.mantraRight : styles.mantra
+                  }
+                  key={index}
+                >
+                  <Image
+                    src={image}
+                    width={789}
+                    height={443}
+                    layout='responsive'
+                  ></Image>
+                </div>
+              );
+            })}
           </section>
         </article>
       </div>
