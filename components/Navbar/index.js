@@ -22,9 +22,14 @@ const Navbar = ({ links = [], programs = [] }) => {
     currentPage =
       currentPage ||
       programs.find(program => pathname.startsWith(program.slug));
-  }
 
-  const colour = currentPage?.colour ?? "000";
+    currentPage = currentPage || {
+      name: "error",
+      slug: "/error",
+      colour: "#000",
+      logo: "/logo.jpeg",
+    };
+  }
 
   return (
     <header
@@ -39,7 +44,7 @@ const Navbar = ({ links = [], programs = [] }) => {
           setIsSubmenuOpen(false);
         }
       }}
-      style={{ backgroundColor: colour }}
+      style={{ backgroundColor: currentPage.colour }}
     >
       <nav className={styles.navbar}>
         <Link
@@ -49,37 +54,7 @@ const Navbar = ({ links = [], programs = [] }) => {
             setOpen(false);
           }}
         >
-          <>
-            {pathname.startsWith("/give-blood") && (
-              <Image
-                src='/giveBloodLogo.jpeg'
-                width='60'
-                height='60'
-                priority
-              />
-            )}
-            {pathname.startsWith("/give-back") && (
-              <Image src='/giveBackLogo.jpeg' width='60' height='60' priority />
-            )}
-            {pathname.startsWith("/worship") && (
-              <Image src='/worshipLogo.jpeg' width='60' height='60' priority />
-            )}
-            {pathname.startsWith("/bible-study") && (
-              <Image
-                src='/bibleStudyLogo.jpeg'
-                width='60'
-                height='60'
-                priority
-              />
-            )}
-            {links.map(l => l.slug).includes(pathname) && (
-              <Image src='/logo.jpeg' width='60' height='60' priority />
-            )}
-            {links.every(l => l.slug !== pathname) &&
-              programs.every(p => !pathname.startsWith(p.slug)) && (
-                <Image src='/logo.jpeg' width='60' height='60' priority />
-              )}
-          </>
+          <img src={currentPage.logo} width='60' height='60' />
         </Link>
 
         <ul className={`${styles.navbarLinks} ${open ? styles.open : ""}`}>
