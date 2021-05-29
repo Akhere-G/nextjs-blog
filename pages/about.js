@@ -42,7 +42,7 @@ const Images = [
 
 const About = () => {
   return (
-    <div className={styles.container}>
+    <div className='container'>
       <div className={styles.about}>
         <h2>About Community</h2>
         <Cards cards={cards} />

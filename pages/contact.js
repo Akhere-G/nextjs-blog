@@ -52,7 +52,7 @@ const Contact = () => {
   });
 
   return (
-    <div className={styles.container}>
+    <div className='container'>
       <Formik
         initialValues={{ ...data }}
         enableReinitialize={true}

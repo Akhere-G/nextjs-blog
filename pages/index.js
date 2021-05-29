@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   return (
     <>
-      <div className={styles.container}></div>
+      <div className='container'></div>
       <Hero paragraphs={[""]} />
       <h2 className={styles.title}>Our Latest Events</h2>
 
