@@ -11,11 +11,11 @@ export default function Home() {
       <section className={styles.section}>
         <h2>What we do</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim error
-          aspernatur quis? Tempore possimus quibusdam architecto quam ipsam,
-          voluptate quo itaque necessitatibus mollitia excepturi neque at, dolor
-          iure libero a labore molestias ullam qui doloremque soluta non
-          veritatis, magnam distinctio!
+          WE are community! We are a faith-based, non-for-profit organisation.
+          We believe we are the hands and feet of Christ; this means our
+          responsibility is to empower, build up and encourage individuals in
+          society, creating a community that reflects God’s glory. We run
+          faith-based programs and events and do outreach.
         </p>
       </section>
     </>
