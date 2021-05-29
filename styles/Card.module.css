@@ -44,4 +44,9 @@
   .cardReversed p {
     margin: 0;
   }
+
+  .cardPara {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
