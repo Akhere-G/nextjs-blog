@@ -63,11 +63,8 @@ const Contact = () => {
           <Form className={styles.form}>
             <h1>Contact Us</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-              fugit facere eveniet tempora vero maxime corrupti? Qui nihil
-              suscipit, iure doloremque dicta eaque maiores placeat, quisquam
-              quibusdam culpa nemo et architecto perspiciatis ad veritatis at,
-              impedit error aliquid! Sunt, modi.
+              If you are interested in joining, send us an email for more
+              details.
             </p>
             <FormTextField name='name' id='name' placeholder='name' />
             <FormTextField name='email' id='email' placeholder='email' />

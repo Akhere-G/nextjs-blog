@@ -81,7 +81,8 @@
 .info {
   display: flex;
   align-items: center;
-  background-color: var(--focus);
+  background-color: black;
+  color: var(--focus);
   padding: 1rem;
   border-radius: 4px;
   position: absolute;
