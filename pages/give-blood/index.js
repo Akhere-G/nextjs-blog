@@ -3,10 +3,17 @@ import { Hero, Events } from "../../components";
 
 import { createClient } from "contentful";
 
+const paragraphs = [
+  `This year, we are collaborating with Sickle Cell Society U.K. and Give blood
+Spread Love to raise awareness on sickle cell and the urgent need for more
+black and mixed raced blood donors`,
+  `We are targeting to register 1000 first time blood donors within the black
+community.`,
+];
 const GiveBloodPage = ({ events }) => {
   return (
     <>
-      <Hero image='volunteer.jpg' />
+      <Hero image='volunteer.jpg' title='Give Blood' paragraphs={paragraphs} />
       <Events program='give-blood' events={events} />
     </>
   );
