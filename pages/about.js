@@ -7,17 +7,27 @@ const cards = [
   {
     id: 1,
     src: "/groupMeeting.jpg",
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias minus officia libero itaque reiciendis, eius consequatur, impedit repudiandae labore totam quos nobis dolores illo unde delectus veritatis iusto dolorum molestiae.",
+    text: `WE are community! We are a faith-based, non-for-profit organisation. We believe we are
+    the hands and feet of Christ; this means our responsibility is to empower, build up and
+    encourage individuals in society, creating a community that reflects God’s glory.
+    We run faith-based programs and events and do outreach.`,
   },
   {
     id: 2,
     src: "/feet.jpg",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quae et voluptatem eaque facilis natus voluptate recusandae ipsum saepe similique, odio nemo tempore perferendis minus labore. Praesentium excepturi deleniti incidunt id ducimus autem sed repellendus, qui amet numquam esse odio sunt eius necessitatibus laborum ea officiis, culpa facilis nisi vitae.",
+    text: `This year, we are collaborating with Sickle Cell Society U.K. and Give blood
+    Spread Love to raise awareness on sickle cell and the urgent need for more
+    black and mixed raced blood donors
+    We are targeting to register 1000 first time blood donors within the black
+    community.`,
   },
   {
     id: 3,
     src: "/hands.jpg",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, molestiae id nulla sed corrupti ullam, consequatur vitae maxime alias tempore, veritatis doloribus quibusdam voluptatum. Odit, totam voluptatum! Debitis illo, nisi consequatur dolor sunt sapiente quam deleniti odit laborum ex alias!",
+    text: `We are called to give and that’s what we enjoy doing the most! Giving for us is not a burden
+    or a choice, it’s our calling and part of what identifies us as followers of Christ. We are
+    excited to partner with and support a range of organisation through a range of different
+    programs.`,
   },
 ];
 
