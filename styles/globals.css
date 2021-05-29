@@ -76,6 +76,16 @@ button {
   align-items: center;
 }
 
+.section {
+  max-width: var(--max-width);
+  padding: 1rem;
+  margin: auto;
+}
+
+.quote {
+  font-style: italic;
+}
+
 .loader {
   border: 16px solid #f3f3f3;
   border-top: 16px solid var(--primary-light);
